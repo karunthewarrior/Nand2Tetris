@@ -1,0 +1,15 @@
+ /**
+ * Or3 gate:
+ * out = 1 if (a == 1 or b == 1 or c == 1)
+ *       0 otherwise
+ */
+
+CHIP Or3 {
+    IN a, b, c;
+    OUT out;
+
+    PARTS:
+    // Put your code here:
+    Or (a=a,b=b,out=or1);
+    Or (a=or1,b=c,out=out);
+}
